@@ -1,0 +1,42 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+GetGenre:
+    path:       /genre/{id}
+    controller: App\Controller\GenreController::show
+    methods:    GET
+
+GetMovie:
+    path:       /movie/{id}
+    controller: App\Controller\MovieController::show
+    methods:    GET
+
+PostPlace:
+    path:       /place
+    controller: App\Controller\PlaceController::create
+    requirements:
+        _method:  POST
+
+PostRegistration:
+    path:       /registration
+    controller: App\Controller\RegistrationController::create
+    requirements:
+        _method:  POST
+
+GetActor:
+    path:       /actor/{id}
+    controller: App\Controller\ActorController::show
+    methods:    GET
+
+PostActorInMovie:
+    path:       /actorInMovie
+    controller: App\Controller\ActorController::createActorInMovie
+    requirements:
+        _method:  POST
+
+PostAuth:
+    path:       /auth
+    controller: App\Controller\AuthController::create
+    requirements:
+        _method:  POST
